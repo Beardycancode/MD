@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD-be your own MD</title>
+    <link rel="stylesheet" href="sample1.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo"><img src="src/logo4.png" alt="" /></div>
+      <nav role="navigation" class="primary-navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Shop &dtrif; </a>
+            <ul class="dropdown">
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Discount</a></li>
+              <li><a href="#">Categorries</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Den</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="search" placeholder="Search items..." />
+      </div>
+      <div class="location"><a href="">Location 🌍 &dtrif;</a></div>
+      <div class="profile"><a href="">Profile</a></div>
+      <div class="more"><a href="">More &dtrif;</a></div>
+    </div>
+    <div class="slide">
+      <div id="slider">
+        <div class="slides">
+          <img
+            src="https://hhsbanner.com/wp-content/uploads/2019/03/victoria_falls-900x300.jpg"
+            width="100%"
+          />
+        </div>
+
+        <div class="slides">
+          <img
+            src="https://blog.cognifit.com/wp-content/uploads/2019/11/hiking-900x300.jpg"
+            width="100%"
+          />
+        </div>
+
+        <div class="slides">
+          <img
+            src="https://travelfree.info/wp-content/uploads/2018/02/croatia-waterfall-in-deep-forest-of-Cr-12755165-900x300.jpg"
+            width="100%"
+          />
+        </div>
+
+        <div class="slides">
+          <img
+            src="https://www.piemonturismo.it/site/wp-content/uploads/2014/07/13-laghi-grande.jpg"
+            width="100%"
+          />
+        </div>
+
+        <div class="slides">
+          <img
+            src="https://improvephotography.com/wp-content/uploads/2017/09/Julian-Baird-20170914-3-900px.jpg"
+            width="100%"
+          />
+        </div>
+
+        <div id="dot">
+          <span class="dot"></span><span class="dot"></span
+          ><span class="dot"></span><span class="dot"></span
+          ><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <main class="main-area">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-content">
+                <h2 class="card-title">XYZ product</h2>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Officiis tempora at rerum?
+                </p>
+
+                <button>Learn more &rightarrow;</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="container">
+        <main class="main-area">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-content">
+                <h2 class="card-title">XYZ product</h2>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Officiis tempora at rerum?
+                </p>
+
+                <button>Learn more &rightarrow;</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="container">
+        <main class="main-area">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-content">
+                <h2 class="card-title">XYZ product</h2>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Officiis tempora at rerum?
+                </p>
+
+                <button>Learn more &rightarrow;</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      var index = 0;
+      var slides = document.querySelectorAll(".slides");
+      var dot = document.querySelectorAll(".dot");
+
+      function changeSlide() {
+        if (index < 0) {
+          index = slides.length - 1;
+        }
+
+        if (index > slides.length - 1) {
+          index = 0;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          dot[i].classList.remove("active");
+        }
+
+        slides[index].style.display = "block";
+        dot[index].classList.add("active");
+
+        index++;
+
+        setTimeout(changeSlide, 2000);
+      }
+
+      changeSlide();
+    </script>
+  </body>
+</html>
